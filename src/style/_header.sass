@@ -1,0 +1,37 @@
+.header
+	min-height: 900px
+	background-color: $color-1
+	padding-top: 20px
+	box-sizing: border-box
+	padding: 10px
+	.container
+		justify-content: space-between
+		flex-wrap: wrap
+	.btn-nav
+		color: $color-3
+		font-size: 40px
+	.promo-box
+		width: 100%
+		text-align: center
+		color: #fff
+		&__title
+			margin: 170px 0 70px
+			font-size: 75px
+			font-family: 'Montserrat', sans-serif
+		&__text
+			margin-bottom: 60px
+.btn
+	font-size: 20px
+	padding: 18px 65px
+	color: #ffffff
+	background-color: $color-2
+	border-radius: 5px
+	border: 0
+	outline: 0
+	outline-offset: 0
+
+@media (max-width: 500px)
+	.header
+		.promo-box
+			&__title
+				font-size: 50px
