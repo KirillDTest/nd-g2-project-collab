@@ -1,0 +1,8 @@
+/node_modules/
+.DS_STORE
+*.log
+dist
+coverage
+.idea
+pages
+package-lock.json
