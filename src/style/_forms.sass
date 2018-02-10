@@ -1,0 +1,87 @@
+.forms-block
+	width: 1170px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-top: 78px
+
+.forms-cont
+	width: 771px
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+
+.form
+	background-color: #f1f4f7
+	font-family: Lora, serif
+	font-size: 15px
+	border: none
+	padding: 0
+	margin-bottom: 32px
+	width: 771px
+	height: 51px
+
+.form__name,
+.form__email
+	width: 371px
+	height: 51px
+
+.form__name
+	margin-right: 25px
+
+.form__massage
+	height: 161px
+
+.form__send
+	background-color: #fa694e
+	font-family: Montserrat, sans-serif
+
+.info
+	margin-right: 80px
+
+.topic
+	font-family: Montserrat, sans-serif
+	font-size: 15px
+	color: #333333
+	font-weight: 600
+
+.text
+	font-family: Lora, serif
+	font-size: 15px
+
+.info > div
+	margin-bottom: 53px
+
+// .form
+// 	&:placeholder
+// 		padding-left 20px
+
+
+
+@media screen and (max-width: 1200px)
+	.forms-block
+		flex-direction: column
+		margin: 0 auto
+		padding-top: 78px
+
+	.info
+		margin: 0 0 0 30px
+
+
+@media screen and (max-width: 992px)
+	.form__name
+		margin-right: 30px
+
+	.form, .forms-cont, .info
+		width: 700px
+
+	.form__name,
+	.form__email
+		width: 371px
+	
+	.info
+		margin: 0
+
+@media screen and (max-width: 768px)
+	.form, .forms-cont, .info
+		width: 371px
