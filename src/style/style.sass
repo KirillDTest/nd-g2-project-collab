@@ -8,6 +8,12 @@ $color-3: #808080 //light grey
 /* font-family: 'Lora', serif; */
 @import url('https://fonts.googleapis.com/css?family=Lora')
 
+
+// *
+// 	box-sizing: border-box
+// 	&:before
+// 	&:after
+// 		box-sizing: border-box
 body
 	font-family: 'Lora', serif
 	font-size: 15px
@@ -22,10 +28,19 @@ ul
 	list-style-type: none
 
 .container
-	max-width: 1170px
-	margin: 0 auto
-	display: flex
+	position: relative
+	margin-left: auto
+	margin-right: auto
+	padding-left: 10px
+	padding-right: 10px
+	@media (min-width: 1220px)
+		width: 1170px
+	@media (max-width: 1219px) and (min-width: 1000px)
+		width: 980px
+	@media (max-width: 999px) and (min-width: 768px)
+		width: 760px
 
 @import '_header.sass'
+@import '_location.sass'
 @import '_forms.sass'
 @import '_advantages.sass'
