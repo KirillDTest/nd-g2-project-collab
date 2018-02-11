@@ -8,3 +8,11 @@ header.header
 			h1.promo-box__title MODERNO
 			p.promo-box__text  Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Curabitur eu velit nulla.
 			button.btn.btn_promo-box Get in Touch
+
+script.
+	$('.promo-box__title').waypoint(function(){
+		this.element.classList.add('header__animate_title')
+	},{offset: "50%"})
+	$('.promo-box__text').waypoint(function(){
+		this.element.classList.add('header__animate_text')
+	},{offset: "50%"})
