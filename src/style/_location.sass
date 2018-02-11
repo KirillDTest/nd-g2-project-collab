@@ -63,3 +63,17 @@
 				border-width: 12px
 				border-style: solid
 				border-color: #333 transparent transparent
+
+	&__animate
+		&-text
+			animation-name: title
+			animation-duration: 1s
+			opacity: 1
+
+@keyframes title
+	0%
+		opacity: 0
+		transform: translateY(50px)
+	100%
+		opacity: 1
+		transform: none
