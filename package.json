@@ -1,13 +1,13 @@
 {
-  "name": "name",
+  "name": "yarn",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Hello World\""
   },
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",

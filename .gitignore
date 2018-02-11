@@ -1,8 +1,8 @@
-/node_modules/
 .DS_STORE
 *.log
-dist
 coverage
 .idea
 pages
-package-lock.json
+.DS_STORE
+node_modules
+dist
