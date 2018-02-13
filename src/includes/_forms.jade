@@ -21,3 +21,12 @@
 			.info__phone
 				p.topic Phone
 				p.text +00 123-456-78900
+script.
+	$('.info').waypoint(function(){
+		this.element.classList.add('animatedInfo')
+	}, {offset:'95%'})
+
+	$('.info').waypoint(function(){
+		this.element.classList.add('infoPopUp')
+	}, {offset:'95%'})
+
