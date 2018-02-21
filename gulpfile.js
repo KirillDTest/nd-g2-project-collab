@@ -23,6 +23,10 @@ gulp.task('html', ()=>{
 	.pipe(gulp.dest('./dist'))
 	.pipe(connect.reload())
 })
+gulp.task('js', ()=>{
+	gulp.src('./src/**/!(_)*.js')
+	.pipe(gulp.dest('./dist/js'))
+})
 
 gulp.task('css', ()=>{
 	gulp.src(['./src/style/*.sass', './src/style/*.scss'])
@@ -47,4 +51,4 @@ gulp.task('connect', ()=>{
 	})
 })
 
-gulp.task('default', ['image-comp', 'html', 'css', 'watch', 'connect']);
+gulp.task('default', ['image-comp', 'html', 'css', 'watch', 'connect', 'js']);

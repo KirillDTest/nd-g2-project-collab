@@ -2,11 +2,32 @@
 	.container
 		h2.location__title.animate-text Get In Touch
 		.location__text.animate-text We are communicative and social
-		.location__map
-			iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7804.35699679012!2d25.303490662405842!3d54.723315573762044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd96c745be5e5b%3A0xc557e2db7ba55179!2sVilnius+University+Antakalnis+Clinical+Hospital+branch%2C+Allergology+Center!5e0!3m2!1sru!2sua!4v1508426921470" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen)
-			.location__map-badge We Are Here
+		.location__map#map
+			//- .location__map-badge We Are Here
 
 script.
 	$('.animate-text').waypoint(function(){
 		this.element.classList.add('location__animate-text')
 	},{offset: "80%"})
+
+script.
+	function initMap() {
+	  var uluru = {lat: 50.444708, lng: 30.524239};
+	  var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 18,
+		center: uluru,
+		// draggable: false,
+		styles: [ { "featureType": "all", "elementType": "labels.text.fill", "stylers": [ { "saturation": 36 }, { "color": "#000000" }, { "lightness": 40 } ] }, { "featureType": "all", "elementType": "labels.text.stroke", "stylers": [ { "visibility": "on" }, { "color": "#000000" }, { "lightness": 16 } ] }, { "featureType": "all", "elementType": "labels.icon", "stylers": [ { "visibility": "off" } ] }, { "featureType": "administrative", "elementType": "geometry.fill", "stylers": [ { "color": "#000000" }, { "lightness": 20 } ] }, { "featureType": "administrative", "elementType": "geometry.stroke", "stylers": [ { "color": "#000000" }, { "lightness": 17 }, { "weight": 1.2 } ] }, { "featureType": "landscape", "elementType": "geometry", "stylers": [ { "color": "#000000" }, { "lightness": 20 } ] }, { "featureType": "poi", "elementType": "geometry", "stylers": [ { "color": "#000000" }, { "lightness": 21 } ] }, { "featureType": "road.highway", "elementType": "geometry.fill", "stylers": [ { "color": "#000000" }, { "lightness": 17 } ] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [ { "color": "#000000" }, { "lightness": 29 }, { "weight": 0.2 } ] }, { "featureType": "road.arterial", "elementType": "geometry", "stylers": [ { "color": "#000000" }, { "lightness": 18 } ] }, { "featureType": "road.local", "elementType": "geometry", "stylers": [ { "color": "#000000" }, { "lightness": 16 } ] }, { "featureType": "transit", "elementType": "geometry", "stylers": [ { "color": "#000000" }, { "lightness": 19 } ] }, { "featureType": "water", "elementType": "geometry", "stylers": [ { "color": "#000000" }, { "lightness": 17 } ] } ]
+	  });
+	  var marker = new google.maps.Marker({
+		position: {lat:50.444642, lng:30.524315},
+		map: map,
+		title: "Hello",
+		// icon: "https://lh3.googleusercontent.com/oKsgcsHtHu_nIkpNd-mNCAyzUD8xo68laRPOfvFuO0hqv6nDXVNNjEMmoiv9tIDgTj8=w170",
+	  });
+	  var marker2 = new google.maps.Marker({
+		position: {lat:50.444642, lng:30.54615},
+		map: map
+	  });
+
+	}
