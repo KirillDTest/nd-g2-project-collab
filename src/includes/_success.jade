@@ -1,0 +1,32 @@
+DOCTYPE 
+	head
+		link(rel='stylesheet', href='style/mainIllarion.css')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js')
+		link(href='https://fonts.googleapis.com/css?family=Lora|Montserrat', rel='stylesheet')
+		meta(name='viewport', content='width=device-width, \
+    	user-scalable=no, \
+    	initial-scale=1.0, \
+    	maximum-scale=1.0, \
+    	minimum-scale=1.0', <title='')
+
+		body 
+			div.mainIllarion
+				div.textIllarion
+					p.success Success Stories
+					p.p2 We do awesome work,check some of success stories so far
+				div.flexIllarion
+					div.boxIllarion
+						img.imgGrey(src="/img/grey.png" alt="")
+						div.block2
+							img.imgPath(src="/img/path.png" alt="")
+							p.t1 Lorem Ipsum Project
+							p.t2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							div.buttonIllarion Viev Project
+			script.
+				
+				$('.success').waypoint(function(){this.element.classList.add('animated')},{offset:'95%'})
+				$('.p2').waypoint(function(){this.element.classList.add('animated')},{offset:'95%'})
+
+	  			
+	  			

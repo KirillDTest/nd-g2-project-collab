@@ -1,0 +1,260 @@
+.mainIllarion
+	width: 100%
+	height: 600px
+	background-color: #fbfbfb
+	//border: 2px solid red //границы моей части
+	display: block
+	
+.textIllarion
+	width: 100%
+	height: 100px
+.flexIllarion
+	width: 100%
+	height: 405px
+	display: flex
+	justify-content: center
+
+
+
+
+.boxIllarion
+	
+	width: 1171px
+	height: 350px
+	border: 1px solid #cecece
+	display: flex
+	align-items: center
+	
+	margin-left: 0px
+	margin-bottom: 39px
+
+.imgGrey
+	width: 570px
+	height: 350px
+	display: flex
+	flex-wrap: wrap
+	
+.t1
+	font-family: Montserrat, sans-serif
+	font-size: 20px
+	font: Montserrat
+	color: #333333
+	margin-left: 34px
+	margin-top: 60-35px
+	font-weight: 400
+	
+	
+.block2
+	width: 600px
+	height: 350px
+ 
+
+.t2	
+	font-family: 'Lora', serif;
+	font-size: 15px
+	font: lora
+	color: #808080
+	
+	margin-top: 39px
+	margin-left: 34px
+	margin-right: 34px
+
+.buttonIllarion
+	width: 200px
+	height: 60px
+	background-color: #fa694e
+	color: #ffffff
+	font-size: 15px
+	font-family: Montserrat, sans-serif
+	font: Montserrat
+	border-radius: 6px
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-left: 34px
+	margin-top: 46px
+
+.success
+	font-family: 'Montserrat', sans-serif
+	font-size: 25px
+	font: Montserrat
+	color: #333333
+	display: flex
+	justify-content: center
+	opacity: 0
+
+.p2
+	font-family: 'Lora', serif;
+	font-size: 15px
+	font: lora
+	color: #808080
+	display: flex
+	justify-content: center
+	opacity: 0
+
+.imgpath
+	margin-left: 567px
+	margin-top: 16px
+	
+@media screen and (max-width: 1200px)
+	.mainIllarion
+		width: 100%
+		
+	.boxIllarion
+		width: 600px
+		height: 176px
+		
+	.imgGrey
+		width: 290px
+		height: 176px
+	.block2
+		width: 300px
+	.imgpath
+		margin-left: 277px
+		margin-top: 100px
+	.t1
+		font-size: 12px
+		margin-left: 17px
+		margin-top: -20px
+	.t2	
+		font-size: 9px
+		margin-top: 20px
+		margin-left: 17px
+		margin-right: 10px
+	.buttonIllarion
+		width: 100px
+		height: 35px
+		font-size: 12px
+		border-radius: 4px
+		
+		
+		margin-left: 17px
+		margin-top: 25px
+@media screen and (max-width: 768px)
+	.mainIllarion
+		width: 100%
+		
+	.boxIllarion
+		width: 500px
+		height: 152px
+		
+	.imgGrey
+		width: 250px
+		height: auto
+	.block2
+		width: 250px
+	.imgpath
+		margin-left: 223px
+		margin-top: 110px
+	.t1
+		font-size: 12px
+		margin-left: 17px
+		margin-top: -20px
+	.t2	
+		font-size: 9px
+		margin-top: 20px
+		margin-left: 17px
+		margin-right: 10px
+	.buttonIllarion
+		width: 75px
+		height: 25px
+		font-size: 10px
+		border-radius: 4px
+		margin-left: 17px
+		margin-top: 15px
+	.success
+		font-size: 20px
+	.p2
+		font-size: 13px
+@media screen and (max-width: 992px)
+	.mainIllarion
+		width: 100%
+		
+	.boxIllarion
+		width: 500px
+		height: 152px
+		
+	.imgGrey
+		width: 250px
+		height: auto
+	.block2
+		width: 250px
+	.imgpath
+		margin-left: 223px
+		margin-top: 110px
+	.t1
+		font-size: 12px
+		margin-left: 17px
+		margin-top: -20px
+	.t2	
+		font-size: 9px
+		margin-top: 20px
+		margin-left: 17px
+		margin-right: 10px
+	.buttonIllarion
+		width: 75px
+		height: 25px
+		font-size: 10px
+		border-radius: 4px
+		margin-left: 17px
+		margin-top: 15px
+	.success
+		font-size: 20px
+	.p2
+		font-size: 13px
+@media screen and (max-width: 576px)
+	.mainIllarion
+		width: 100%
+		height: 100%
+		
+	.boxIllarion
+		width: 350px
+		height: 400px
+		display: block
+		
+	.imgGrey
+		width: 350px
+		height: auto
+	.block2
+		width: 300px
+		display: block
+		align-items: 
+		justify-content: 
+	.imgpath
+		margin-left: 330px
+		margin-top: 8px
+		height: 10px
+		margin-right: 0px
+	.t1
+		font-size: 12px
+		margin-left: 25px
+		margin-top: 0px
+	.t2	
+		font-size: 11px
+		margin-top: 8px
+		margin-left: 25px
+		margin-right: 10px
+	.buttonIllarion
+		width: 300px
+		height: 35px
+		font-size: 12px
+		border-radius: 4px
+		
+		
+		margin-left: 25px
+		margin-top: 10px
+			
+@keyframes popUp
+  from
+    opacity: 0
+    transform: translateY(30px)
+
+  to
+    opacity: 1
+    transform: none
+
+
+.animated
+  animation-name: popUp
+  animation-duration: 1s
+  opacity: 1
