@@ -11,9 +11,11 @@
 		font-size: 25px
 		text-align: center
 		color: #333
+		opacity: 0
 	&__text
 		text-align: center
 		color: #808080
+		opacity: 0
 		@media (min-width: 768px)
 			margin-bottom: 70px
 		@media (max-width: 767px)
@@ -66,11 +68,11 @@
 
 	&__animate
 		&-text
-			animation-name: title
+			animation-name: text
 			animation-duration: 1s
 			opacity: 1
 
-@keyframes title
+@keyframes text
 	0%
 		opacity: 0
 		transform: translateY(50px)

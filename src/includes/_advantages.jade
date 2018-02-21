@@ -2,22 +2,27 @@ div.advantages-box
 	div.advantages
 		div.advantages__icon-box.advantages__icon-box_red
 			img(src='img/icon-1.png')
-		h3 We Are Creative
-		p.
+		h3.toAnimate We Are Creative
+		p.toAnimate.
 			Lorem ipsum dolor sit amet, dicta albucius ne.
 			Nostro gubergren in ius, ea nam vocent
 	div.advantages
 		div.advantages__icon-box
 			img(src='img/icon-2.png')
-		h3 We have Skills
-		p.
+		h3.toAnimate We have Skills
+		p.toAnimate.
 			Nostro gubergren in ius, ea nam vocent
 			electram. An verear efficiantur.
 	div.advantages
 		div.advantages__icon-box
 			img(src='img/icon-3.png')
-		h3 We Love To Help
-		p.
+		h3.toAnimate We Love To Help
+		p.toAnimate.
 			Lorem ipsum dolor sit amet, dicta. Nostro
 			gubergren in ius, ea nam vocent. An verear
 			efficiantur usu
+script.
+	$('.toAnimate').waypoint(function(){
+		this.element.classList.add('animated')
+	},{offset: "95%"})
+

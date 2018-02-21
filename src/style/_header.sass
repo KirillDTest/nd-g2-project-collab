@@ -1,3 +1,20 @@
+@keyframes textRotate
+	0%
+		opacity: 0
+		transform: translateY(50px)
+		transform: rotate(0)
+	100%
+		opacity: 1
+		transform: none
+		transform: rotate(360deg)
+
+@keyframes showText
+	0%
+		opacity: 0
+		transform: translateY(50px)
+	100%
+		opacity: 1
+
 .header
 	min-height: 900px
 	background-color: $color-1
@@ -20,6 +37,19 @@
 			font-family: 'Montserrat', sans-serif
 		&__text
 			margin-bottom: 60px
+			opacity: 0
+
+	&__animate_title
+		animation-name: textRotate
+		animation-duration: 1s
+		opacity: 1
+
+	&__animate_text
+		animation-name: showText
+		animation-duration: 1s
+		opacity: 1
+		animation-fill-mode: forwards
+
 .btn
 	font-size: 20px
 	padding: 18px 65px
