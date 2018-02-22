@@ -3,16 +3,68 @@ header.header
 		.logo
 			a.logo__link(href="/")
 				img(src="img/logo.png" alt="logo")
-		.btn-nav.fi-list
+
+		.btn-nav.fi-list(for="modal__panel")
+		.modal(for="modal")
+		.panel
+			.panel__close.fi-x
+			.panel__logo
+				img(src="img/logo.png" alt="logo")
+			.nav
+				.nav__title MENU
+				.nav__menu
+					A.nav__item(href="#") HOME
+					A.nav__item(href="#") SERVICES
+					A.nav__item(href="#") STORIES
+					A.nav__item(href="#") CONTACT
+
+			.sosial-btn
+				I.sosial-btn__item.fi-social-facebook
+				I.sosial-btn__item.fi-social-twitter
+
 		.promo-box
 			h1.promo-box__title MODERNO
 			p.promo-box__text  Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Curabitur eu velit nulla.
 			button.btn.btn_promo-box Get in Touch
 
 script.
+	// Анимация текста
 	$('.promo-box__title').waypoint(function(){
 		this.element.classList.add('header__animate_title')
-	},{offset: "50%"})
+	},{offset: "50%"});
+
 	$('.promo-box__text').waypoint(function(){
 		this.element.classList.add('header__animate_text')
-	},{offset: "50%"})
+	},{offset: "50%"});
+
+	$('.btn-nav').waypoint(function(){
+		this.element.classList.add('scroll')
+	},{offset: "-50%"})
+
+	$('.btn-nav').waypoint(function(){
+		this.element.classList.remove('scroll')
+	},{offset: "0"})
+
+	// Навигация
+	let btnNav= document.querySelector('.btn-nav'),
+			modal= document.querySelector('.modal'),
+			panel= document.querySelector('.panel'),
+			panelClose= document.querySelector('.panel__close');
+
+	btnNav.addEventListener('click', ()=>{
+		modal.classList.add('active');
+		panel.classList.add('active');
+		btnNav.style.display= 'none';
+	});
+
+	panelClose.addEventListener('click', ()=>{
+		modal.classList.remove('active');
+		panel.classList.remove('active');
+		btnNav.style.display= 'inline';
+	});
+
+	modal.addEventListener('click', ()=>{
+		modal.classList.remove('active');
+		panel.classList.remove('active');
+		btnNav.style.display= 'inline';
+	});

@@ -25,9 +25,16 @@
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
+		position: relative
 	.btn-nav
 		color: $color-3
 		font-size: 40px
+		position: relative
+		z-index: 10
+		&.scroll
+			position: fixed
+			bottom: 30px
+			right: 30px
 	.promo-box
 		width: 100%
 		text-align: center
@@ -50,6 +57,72 @@
 		animation-duration: 1s
 		opacity: 1
 		animation-fill-mode: forwards
+
+	.modal
+		position: fixed
+		right: 0
+		top: 0
+		height: 100vh
+		width: 100%
+		background: rgba(255, 255, 255, .1)
+		z-index: -1
+		opacity: 0
+		transition-duration: 0.5s
+		&.active
+			z-index: 1
+			opacity: 1
+			transition-duration: 0.5s
+	.panel
+		font-family: 'Montserrat', sans-serif
+		position: fixed
+		z-index: 2
+		right: -500px
+		top: 0
+		width: 100%
+		max-width: 500px
+		height: 100%
+		display: flex
+		flex-direction: column
+		box-sizing: border-box
+		justify-content: space-around
+		padding: 20px
+		background-color: $color-1
+		text-align: center
+		transition-duration: 0.5s
+		&.active
+			right: 0
+			transition-duration: 0.5s
+		&__close
+			display: flex
+			justify-content: flex-end
+			margin-bottom: 45px
+		&__logo
+			margin-bottom: 70px
+	.nav
+		flex-direction: column
+		margin-bottom: 80px
+		&__title
+			font-size: 35px
+			margin-bottom: 90px
+			color: #fff
+		&__menu
+			display: flex
+			flex-direction: column
+		&__item
+			margin-bottom: 40px
+			text-decoration: none
+			&:link,
+			&:visited,
+			&:active,
+			&:hover
+				color: #fff
+			&:hover
+				text-decoration: underline
+	.sosial-btn
+		&__item
+			color: #ffffff
+			font-size: 20px
+			padding: 5px
 
 .btn
 	font-size: 20px
